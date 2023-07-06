@@ -1,0 +1,21 @@
+.loadPage {
+  height: 100vh;
+  display: flex;
+  align-items: center; /* 수직 가운데 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  margin-left: 200px;
+}
+
+.loader {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+    Set the color of the icon
+  */
+.loader svg path,
+.loader svg rect {
+  fill: #8a2be2;
+}

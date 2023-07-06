@@ -1,0 +1,25 @@
+---
+dirName: "폴더 이름"
+contentNo: "이곳에 게시물 번호"
+mainCategory: "이곳에 게시물의 대분류"
+tag: [이곳에 게시물 태그]
+title: "이곳에 게시물 제목"
+updated: "이곳에 게시물 업로드 날짜(ex> "2023-03-11")"
+image: "이곳에 이미지파일 이름"
+isFeatured: true  -> 노출 할 경우 true 아니면 false 
+---
+
+
+
+-------------- 양식 ---------------
+
+---
+dirName: ""
+contentNo: 
+mainCategory: ""
+tag: [""]
+title: ""
+updated: ""
+image: ""
+isFeatured: 
+---

@@ -1,0 +1,64 @@
+---
+dirName: "coding"
+contentNo: 1
+mainCategory: "프로그래밍"
+tag: ["스프링", "어노테이션"]
+title: "[스프링][어노테이션]@Getter & @Setter."
+updated: "2023-04-30"
+image: ""
+isFeatured: true
+---
+
+
+<Heading role="h3">@Getter & @Setter</Heading><hr/><br/>
+<P>아래는 간단한 userID와 userPW를 담고있는 클래스이다.</P>
+<CodeBlock language="java" value="public class UserVO {
+    private String userID;
+    private String userPW;
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
+    public String getUserPW() {
+        return userPW;
+    }
+
+    public void setUserPW(String userPW) {
+        this.userPW = userPW;
+    }
+}"/>
+<br/>
+<P>위와 같이 ID와 PW의 값을 가져오거나 변경하기 위해 get/set 메서드가 필요하다.</P><br/>
+<P>하지만 이 메서드들은 반복적이고 다른 클래스에서도 사용되는 경우가 많다.</P><br/>
+<P>그래서 Lombok에 있는 어노테이션을 통해 코드를 줄일 수 있다.</P><br/><br/>
+<P>아래는 어노테이션을 적용시킨 모습이다.</P>
+
+
+<CodeBlock language="java" value="import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+public class UserVO {
+    private String userID;
+    private String userPW;
+}"/>
+
+<br/>
+<P>위의 두 코드는 동일한 기능을 한다. 이처럼 코드를 자동으로 간결하고 보기 쉽게 만들어 생산성과 가독성을 높일 수 있다.</P>
+<br/>
+<P>물론 특정 필드에 대해서 getter 혹은 setter를 적용하지 않으려면 아래의 방법을 사용하면 된다.</P>
+
+<CodeBlock language="java" value="import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+public class UserVO {
+    private String userID;
+    @Setter(AccessLevel.NONE) private String userPW;
+}"/>
+<P>위의 코드는 userPW에 대해 setter 메서드를 생성하지 않게 하는 코드이다.</P>

@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "remove": "rm -rf node_modules/.cache && rm -rf build/",
+    "serve": "npm run remove && npm run open && next dev",
+    "start": "npm run remove && next build && npm run open && next start",
+    "build": "npm run remove && next build",
+    "backupgit": "mv ../io/.git ../backup",
+    "restoregit": "mv ../backup/.git ../io",
+    "open": "start http://localhost:3000",
+    "export": "npm run backupgit && npm run remove && next build && next export -o ../io/ && touch ../io/.nojekyll && npm run restoregit && cd ../io && git add ."
+  },
+  "dependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.37",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "gray-matter": "^4.0.3",
+    "next": "13.3.0",
+    "next-mdx-remote": "^4.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-unwrap-images": "^3.0.1",
+    "styled-components": "^5.3.11",
+    "typescript": "5.0.4"
+  }
+}

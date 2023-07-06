@@ -1,0 +1,20 @@
+.mainPage {
+  position: relative;
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 10%;
+  justify-content: center;
+}
+
+.aa {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.aa:hover {
+  color: #8a2be2;
+}
